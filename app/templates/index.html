@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classification Mapping</title>
+    <link href="/static/style.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Classification Mapping</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="text" name="terminology" placeholder="Terminology" />
+        <input type="number" name="year" placeholder="Year" />
+        <input type="file" name="file" />
+        <button type="submit">Upload Codes CSV</button>
+    </form>
+    <hr />
+    <form id="mapping-form" action="/mapping" method="post">
+        <h2>Create Mapping</h2>
+        <input type="text" name="source_terminology" placeholder="Source Terminology" />
+        <input type="number" name="source_year" placeholder="Source Year" />
+        <input type="text" name="source_code" placeholder="Source Code" />
+        <input type="text" name="target_terminology" placeholder="Target Terminology" />
+        <input type="number" name="target_year" placeholder="Target Year" />
+        <input type="text" name="target_code" placeholder="Target Code" />
+        <button type="submit">Save Mapping</button>
+    </form>
+</body>
+</html>
